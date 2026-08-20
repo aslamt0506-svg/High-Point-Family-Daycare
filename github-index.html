@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>High Point Family Day Care Center | High Point, NC</title>
+<meta name="description" content="High Point Family Day Care Center — faith-based early education, infant through after-school care, and the new High Point Family Leadership Academy in High Point, NC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f8f6f1;
+    --cream-2:#f1ece0;
+    --paper:#fffdfa;
+    --ink:#1f2a37;
+    --muted:#4b5563;
+    --line:#e7e2d6;
+    --gold:#c8963e;
+    --gold-dark:#a3742c;
+    --green:#4a7c59;
+    --blue:#6b7fa0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Inter',"Segoe UI",system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px;}
+  .eyebrow{display:inline-block;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--gold-dark);margin-bottom:14px;}
+  section{padding:88px 0;}
+  .section-head{max-width:680px;margin:0 auto 44px;text-align:center;}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.06rem;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:100px;transition:transform .15s ease,box-shadow .15s ease;border:none;cursor:pointer;font-family:inherit;}
+  .btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 10px 24px -10px #a3742c66;}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px #a3742c88;}
+  .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink);}
+  .btn-outline:hover{background:var(--ink);color:var(--cream);}
+  .btn-outline-light{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-outline-light:hover{background:#fff;color:var(--ink);}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(248,246,241,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  header .wrap{padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .brand{display:flex;flex-direction:column;justify-content:center;line-height:1.05;}
+  .brand .top{font-weight:800;font-size:1.18rem;letter-spacing:-.01em;color:#000;white-space:nowrap;}
+  .brand .letters{display:flex;gap:3px;margin:5px 0;}
+  .brand .letters span{font-weight:800;font-size:.85rem;width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#fff;}
+  .brand .bottom{font-weight:800;font-size:.68rem;letter-spacing:.08em;color:#000;white-space:nowrap;}
+  nav.mainnav{display:flex;gap:18px;align-items:center;font-weight:600;font-size:.88rem;flex-wrap:wrap;}
+  nav.mainnav a.navlink:hover{color:var(--gold-dark);}
+  .bw-link img{height:24px;width:auto;object-fit:contain;}
+
+  /* HERO */
+  .hero .wrap{padding-top:64px;padding-bottom:80px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  .hero h1{font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.08;letter-spacing:-.01em;margin:14px 0 20px;}
+  .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:38ch;margin-bottom:30px;}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+  .hero .trust{display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted);font-weight:600;}
+  .stars{color:var(--gold-dark);letter-spacing:2px;}
+  .hero img{width:100%;height:440px;object-fit:cover;border-radius:22px;}
+
+  /* VALUES BAR */
+  .valuesbar{background:var(--ink);color:var(--cream);padding:24px 0;}
+  .valuesbar .wrap{display:flex;justify-content:center;flex-wrap:wrap;text-align:center;}
+  .valuesbar span{font-family:'Fraunces',serif;font-size:1rem;padding:0 26px;border-left:1px solid rgba(248,246,241,.25);}
+  .valuesbar span:last-child{border-right:1px solid rgba(248,246,241,.25);}
+
+  /* ABOUT */
+  #about{background:var(--paper);}
+  #about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .about-photos img{width:100%;height:280px;object-fit:cover;border-radius:20px;}
+  .about-photos img:first-child{margin-top:28px;}
+  #about h2{font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.12;margin-bottom:16px;}
+  #about p.body{color:var(--muted);font-size:1.04rem;}
+  .quotebox{background:var(--cream);border-radius:20px;padding:24px;margin-top:22px;border-left:5px solid var(--gold);}
+  .quotebox h3{font-size:1.08rem;margin-bottom:8px;}
+  .quotebox p{margin:0;color:var(--muted);font-style:italic;}
+  .missionbox{background:var(--ink);color:var(--cream);border-radius:20px;padding:24px;margin-top:18px;}
+  .missionbox h3{font-size:1.08rem;margin-bottom:8px;color:var(--gold);}
+  .missionbox p{margin:0;color:#c1cbd6;}
+  .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:36px;}
+  .values-grid .card{background:var(--cream);border-radius:16px;padding:20px;}
+  .values-grid .card h4{font-size:1rem;margin-bottom:6px;font-family:'Fraunces',serif;}
+  .values-grid .card p{font-size:.9rem;color:var(--muted);margin:0;}
+
+  /* PROGRAMS */
+  #programs{background:var(--cream-2);}
+  .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+  .prog-card{background:var(--paper);border-radius:20px;padding:28px;box-shadow:0 18px 40px -26px #1f2a3740;border-top:4px solid var(--gold);transition:transform .2s ease;}
+  .prog-card:hover{transform:translateY(-4px);}
+  .prog-icon{width:50px;height:50px;border-radius:50%;background:#fdeecb;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .prog-icon i{width:13px;height:13px;border-radius:3px;background:var(--gold);transform:rotate(45deg);display:block;}
+  .prog-card .age{font-weight:800;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px;display:block;}
+  .prog-card h3{font-size:1.2rem;margin-bottom:6px;}
+  .prog-card p{color:var(--muted);font-size:.95rem;margin:0;}
+
+  /* LEARNING CENTERS */
+  #centers{background:var(--paper);}
+  .centers-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;}
+  .center-pill{background:var(--cream);border-radius:16px;padding:20px;text-align:center;font-weight:700;font-family:'Fraunces',serif;font-size:1.02rem;}
+
+  /* STAFF */
+  #staff{background:var(--cream-2);}
+  .staff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .staff-card{background:var(--paper);border-radius:20px;padding:26px;text-align:center;}
+  .staff-avatar{width:72px;height:72px;border-radius:50%;background:var(--ink);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;margin:0 auto 16px;}
+  .staff-card h3{font-size:1.08rem;margin-bottom:4px;}
+  .staff-card .yrs{font-size:.8rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;display:block;}
+  .staff-card p{font-size:.92rem;color:var(--muted);margin:0;}
+
+  /* CARE */
+  #care{background:var(--paper);}
+  #care .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  #care img{width:100%;height:360px;object-fit:cover;border-radius:20px;}
+  #care h2{font-size:clamp(1.9rem,3.4vw,2.4rem);line-height:1.12;margin-bottom:16px;}
+  #care p.body{color:var(--muted);font-size:1.03rem;}
+  .bullets{display:grid;gap:12px;margin-top:20px;}
+  .bullets .b{display:flex;gap:12px;align-items:flex-start;}
+  .bullets .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;flex:0 0 auto;}
+  .bullets p{margin:0;font-weight:600;color:var(--ink);}
+
+  /* WHY */
+  #why{background:var(--cream-2);}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;}
+  .why-card{text-align:center;padding:24px 16px;background:var(--paper);border-radius:18px;}
+  .why-icon{width:42px;height:42px;border-radius:50%;background:#fdeecb;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .why-icon i{width:11px;height:11px;border-radius:2px;background:var(--gold-dark);transform:rotate(45deg);display:block;}
+  .why-card h3{font-size:1.02rem;margin-bottom:6px;}
+  .why-card p{font-size:.88rem;color:var(--muted);margin:0;}
+
+  /* LEADERSHIP ACADEMY */
+  #leadership{background:var(--ink);color:var(--cream);}
+  #leadership .eyebrow{color:var(--gold);}
+  #leadership .section-head h2{color:#fff;}
+  #leadership .section-head p{color:#c1cbd6;}
+  .la-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;margin-bottom:56px;}
+  .la-intro p{color:#c1cbd6;font-size:1.05rem;margin-bottom:22px;}
+  .la-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:26px;}
+  .la-card .age{font-weight:800;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+  .la-card h3{color:#fff;font-size:1.25rem;margin-bottom:8px;}
+  .la-card p{color:#c1cbd6;font-size:.96rem;margin:0;}
+  .la-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:56px;}
+  .la-link{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px 20px;transition:background .15s ease;}
+  .la-link:hover{background:rgba(255,255,255,.12);}
+  .la-link .ic{flex:0 0 40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Fraunces',serif;}
+  .la-link .tx strong{display:block;font-size:.96rem;color:#fff;}
+  .la-link .tx span{display:block;font-size:.82rem;color:#c1cbd6;}
+  .steps-wrap{margin-bottom:56px;}
+  .steps-wrap h3{color:#fff;font-size:1.4rem;margin-bottom:22px;}
+  .step{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(248,246,241,.15);}
+  .step .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.02rem;}
+  .step h4{font-size:1.04rem;color:#fff;margin-bottom:2px;}
+  .step p{font-size:.9rem;color:#c1cbd6;margin:0;}
+
+  /* FORM */
+  .form-card{background:var(--paper);border-radius:22px;padding:32px;box-shadow:0 24px 50px -20px rgba(31,42,55,.5);color:var(--ink);}
+  .form-card h3{font-size:1.4rem;margin-bottom:4px;}
+  .form-card > p{color:var(--muted);font-size:.92rem;margin-bottom:22px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+  .form-field{margin-bottom:16px;}
+  .form-field label{display:block;font-weight:800;font-size:.82rem;margin-bottom:6px;}
+  .form-field input,.form-field select,.form-field textarea{
+    width:100%;padding:13px 15px;border:2px solid var(--line);border-radius:14px;font-family:inherit;font-size:.96rem;background:var(--cream);color:var(--ink);
+  }
+  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--gold-dark);}
+  .form-submit{width:100%;justify-content:center;}
+  .form-note{font-size:.8rem;color:#6b7280;margin-top:10px;}
+  .thankyou{background:var(--green);color:#fff;border-radius:16px;padding:18px;font-weight:700;display:none;}
+
+  /* REVIEWS */
+  #reviews{background:var(--ink);color:var(--cream);}
+  #reviews .section-head h2{color:#fff;}
+  .review-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px;}
+  .review-card .stars{display:block;margin-bottom:14px;}
+  .review-card p{font-size:.98rem;color:#e5e7eb;margin:0;}
+  .review-card .who{margin-top:16px;font-family:'Fraunces',serif;font-weight:700;color:var(--gold);}
+
+  /* FAQ */
+  #faq{background:var(--cream);}
+  #faq .wrap{max-width:820px;}
+  details{background:var(--paper);border-radius:16px;margin-bottom:14px;overflow:hidden;border:1px solid var(--line);}
+  summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.02rem;list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+  summary:after{content:"+";float:right;font-size:1.3rem;color:var(--gold-dark);}
+  details[open] summary:after{content:"–";}
+  details .a{padding:0 24px 22px;color:var(--muted);}
+
+  /* CONTACT */
+  #contact{background:var(--cream-2);}
+  #contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start;}
+  .contact-info h2{font-size:clamp(1.9rem,3.4vw,2.4rem);margin-bottom:16px;}
+  .contact-info p.body{color:var(--muted);margin-bottom:24px;}
+  .contact-detail{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
+  .contact-detail .ic{flex:0 0 38px;height:38px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--gold-dark);}
+  .contact-detail strong{display:block;font-size:.95rem;}
+  .contact-detail span,.contact-detail a{font-size:.92rem;color:var(--muted);}
+  .maprow{border-radius:20px;overflow:hidden;margin-top:24px;border:1px solid var(--line);}
+  .maprow iframe{width:100%;height:260px;border:0;display:block;}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:var(--cream);padding:64px 0 30px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-logo{background:#fff;display:inline-flex;flex-direction:column;align-items:flex-start;padding:10px 16px;border-radius:12px;margin-bottom:16px;}
+  .footer-logo .top{font-weight:800;font-size:.95rem;color:#000;}
+  .footer-logo .letters{display:flex;gap:2px;margin:4px 0;}
+  .footer-logo .letters span{font-weight:800;font-size:.68rem;width:18px;height:18px;display:flex;align-items:center;justify-content:center;border-radius:3px;color:#fff;}
+  .footer-logo .bottom{font-weight:800;font-size:.55rem;letter-spacing:.06em;color:#000;}
+  footer h4{font-size:1.02rem;margin-bottom:14px;color:var(--gold);}
+  footer .links{display:flex;flex-direction:column;gap:9px;}
+  footer .links a{color:#c1cbd6;font-size:.94rem;}
+  footer .links a:hover{color:#fff;}
+  footer p{color:#c1cbd6;font-size:.94rem;}
+  footer .hours{margin-top:12px;color:var(--gold);font-weight:700;font-size:.94rem;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#9aa5b1;}
+
+  @media(max-width:860px){
+    .hero .wrap,#about .wrap,#care .wrap,#contact .wrap,.la-intro{grid-template-columns:1fr!important;}
+    .hero img{order:-1;height:280px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="brand" title="High Point Family Day Care Center">
+      <span class="top">HIGH POINT</span>
+      <span class="letters">
+        <span style="background:#053aa1">F</span>
+        <span style="background:#0f7166">A</span>
+        <span style="background:#e1372f">M</span>
+        <span style="background:#694fb6">I</span>
+        <span style="background:#fecd0c;color:#000">L</span>
+        <span style="background:#fe960a">Y</span>
+      </span>
+      <span class="bottom">DAY CARE CENTER</span>
+    </a>
+    <nav class="mainnav">
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#programs">Programs</a>
+      <a class="navlink" href="#care">Before &amp; After Care</a>
+      <a class="navlink" href="#leadership">Leadership Academy</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="navlink" href="#faq">FAQ</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="btn btn-gold" href="#enroll" style="padding:10px 20px;font-size:.86rem;">Schedule a Tour</a>
+      <a class="bw-link" href="https://schools.mybrightwheel.com/sign-in?redirect_path=/" target="_blank" rel="noopener" title="Sign in with brightwheel">
+        <img src="images/brightwheel-logo.png" alt="brightwheel">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">High Point, NC</span>
+      <h1>Quality Care, When You Are Not There</h1>
+      <p class="lead">Growing together, every step of the way — full-day early education plus before- and after-school care, built around faith, strong academics, confident character, and dependable hours for working families.</p>
+      <div class="ctas">
+        <a href="#enroll" class="btn btn-gold">Schedule a Tour</a>
+        <a href="#programs" class="btn btn-outline">See our programs</a>
+      </div>
+      <div class="trust">
+        <span class="stars">★★★★★</span>
+        <span>Trusted High Point families for daily drop-off and pickup, 6:30 AM – 5:30 PM</span>
+      </div>
+    </div>
+    <img src="images/hero-photo.webp" alt="Students and staff at High Point Family Day Care Center">
+  </div>
+</section>
+
+<!-- VALUES BAR -->
+<div class="valuesbar">
+  <div class="wrap">
+    <span>Academic Excellence</span>
+    <span>Faith &amp; Character</span>
+    <span>Before &amp; After Care</span>
+    <span>Dedicated Educators</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-photos">
+      <img src="images/about-photo-1.webp" alt="Teacher celebrating with a preschool graduate">
+      <img src="images/about-photo-2.webp" alt="Toddlers at play in the classroom">
+    </div>
+    <div>
+      <span class="eyebrow">About us</span>
+      <h2>Incorporating faith into our learning</h2>
+      <p class="body">High Point Family Day Care Center is a state-licensed childcare center in High Point, NC, serving infants, toddlers, preschoolers, and school-aged children with curriculum-based programs built on NC Foundations tools. We're a faith-based community that incorporates the teachings of Jesus into our curriculum while providing academic preparation guided by God's Word — all within a safe, loving, and fun environment that supports family involvement and every child's individual development.</p>
+      <div class="quotebox">
+        <h3>Teachers as leaders</h3>
+        <p>"Teachers lead by example by having positive attitudes, dynamic classroom settings, and curriculum-based lesson plans that encourage our students to be mini-leaders, allowing them to have room to express themselves freely."</p>
+      </div>
+      <div class="missionbox">
+        <h3>Our mission</h3>
+        <p>To provide a safe, structured, and engaging environment where every child builds the academic skills, faith foundation, and personal confidence to lead — in the classroom and beyond.</p>
+      </div>
+      <div class="values-grid">
+        <div class="card"><h4>Growing Together</h4><p>Supporting individual growth and development toward every child's full potential.</p></div>
+        <div class="card"><h4>Lifelong Learning</h4><p>Building curiosity for academic excellence and life's challenges.</p></div>
+        <div class="card"><h4>Holistic Growth</h4><p>Creating well-rounded individuals through comprehensive development.</p></div>
+        <div class="card"><h4>Co-Curricular Excellence</h4><p>Enhancing education through creativity, teamwork, and leadership.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our programs</span>
+      <h2>A place for every age and stage</h2>
+      <p>From infancy through school age, we meet each child right where they are with play-based, curriculum-guided learning.</p>
+    </div>
+    <div class="grid-cards">
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Birth – 12 mo</span>
+        <h3>Infants</h3>
+        <p>Responsive care for infants — needs met, with eating and sleeping on your child's own demand schedule.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Up to 2.5 yrs</span>
+        <h3>Toddlers</h3>
+        <p>A safe, fun, nurturing environment for toddlers up to two and a half years old.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Ages 3 – 4</span>
+        <h3>Pre-School</h3>
+        <p>Develops language, physical, social, and emotional skills through art, science, math, and literacy.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Ages 4 – 5</span>
+        <h3>Pre-Kindergarten</h3>
+        <p>Designed to give each child a confident head start before they enter Kindergarten.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Seasonal</span>
+        <h3>Summer Camps</h3>
+        <p>An adventure-filled summer camp full of fun, friends, games, crafts, and unforgettable memories.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-icon"><i></i></div>
+        <span class="age">Ages 5 – 12</span>
+        <h3>After School</h3>
+        <p>Enrichment, homework help, and supervised activities for children ages 5–12 in a safe environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING CENTERS -->
+<section id="centers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Play-based learning</span>
+      <h2>Our classroom learning centers</h2>
+      <p>Every classroom is organized around hands-on centers that let children explore, create, and learn at their own pace.</p>
+    </div>
+    <div class="centers-list">
+      <div class="center-pill">Manipulative</div>
+      <div class="center-pill">Science</div>
+      <div class="center-pill">Dramatic Play</div>
+      <div class="center-pill">Art</div>
+      <div class="center-pill">Blocks</div>
+      <div class="center-pill">Reading</div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section id="staff">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Meet the team</span>
+      <h2>Experienced teachers your child will love</h2>
+      <p>Our educators bring years of experience and genuine care to every classroom.</p>
+    </div>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-avatar">SB</div>
+        <h3>Stephonia Blaisdell</h3>
+        <span class="yrs">10 years experience</span>
+        <p>Teaches through art and music, and finds fulfillment in shaping young minds.</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-avatar">BL</div>
+        <h3>Brennan Laney</h3>
+        <span class="yrs">12 years experience</span>
+        <p>Values forming close relationships with children and treats every student with personal care.</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-avatar">MI</div>
+        <h3>Ms. Insa</h3>
+        <span class="yrs">11 years experience</span>
+        <p>Develops skills through innovative lesson plans, with an emphasis on practical daily learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARE -->
+<section id="care">
+  <div class="wrap">
+    <img src="images/care-photo.webp" alt="High Point Family Day Care shuttle used for before and after school pickup">
+    <div>
+      <span class="eyebrow">Built for busy families</span>
+      <h2>Before &amp; after school care, every school day</h2>
+      <p class="body">Drop off as early as 6:30 AM and pick up by 5:30 PM. Our before- and after-care blends homework support, enrichment activities, and supervised free play — so your child's day is covered from first bell to last pickup.</p>
+      <div class="bullets">
+        <div class="b"><span class="dot"></span><p>Homework help &amp; quiet study time</p></div>
+        <div class="b"><span class="dot"></span><p>Enrichment activities &amp; supervised play</p></div>
+        <div class="b"><span class="dot"></span><p>Seasonal &amp; summer camp options</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why families choose us</span>
+      <h2>The right fit for your child</h2>
+      <p>Strong academics, real relationships, and open communication every step of the way.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><i></i></div><h3>Sports &amp; Activity</h3><p>Active play that builds coordination and teamwork.</p></div>
+      <div class="why-card"><div class="why-icon"><i></i></div><h3>Creative Lessons</h3><p>Imaginative, hands-on lessons that spark curiosity.</p></div>
+      <div class="why-card"><div class="why-icon"><i></i></div><h3>Reading &amp; Writing</h3><p>Immersive literacy that grows confident readers and writers.</p></div>
+      <div class="why-card"><div class="why-icon"><i></i></div><h3>Events &amp; Parties</h3><p>Celebrations and community gatherings that bring our families together.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP ACADEMY -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Opening in High Point · 2026</span>
+      <h2>High Point Family Leadership Academy</h2>
+      <p>Building on our early childhood foundation, we're expanding into a private school for the elementary years — with nationally accredited academics, small classes, and the same faith-based, family-first approach our community already trusts.</p>
+    </div>
+
+    <div class="la-intro">
+      <div>
+        <p>The High Point Family Leadership Academy extends everything families already know us for — small class sizes, consistent routines, and teachers who know every child by name — into a full academic program for Kindergarten through 2nd grade. Every lesson plan is built to encourage students to be "mini-leaders," with room to express themselves freely while building the academic skills and personal confidence to lead, in the classroom and beyond.</p>
+        <p>Tuition support is available for qualifying families through the <a href="https://www.ncseaa.edu/NCOS/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;text-decoration:underline;">NC Opportunity Scholarship</a>, North Carolina's statewide private-school scholarship program.</p>
+      </div>
+      <div class="la-card">
+        <span class="age">New · Grades K – 2</span>
+        <h3>Lower School</h3>
+        <p>A full academic curriculum for Kindergarten, 1st, and 2nd graders — extending our Pre-K foundation into elementary-level leadership and academics, with the same dependable before- and after-care hours.</p>
+      </div>
+    </div>
+
+    <div class="steps-wrap">
+      <h3>From first hello to first day</h3>
+      <div class="step">
+        <div class="n">1</div>
+        <div><h4>Tell us about your child</h4><p>Share a few details using the form below. It takes about two minutes.</p></div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div><h4>Book your tour</h4><p>We'll reach out to schedule a visit — daily 5–7 PM, or Saturdays by appointment.</p></div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div><h4>Complete enrollment</h4><p>We'll walk you through the application and answer every question.</p></div>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <div><h4>Get set up on our parent app</h4><p>Once enrolled, you'll receive daily updates, photos, and messages through Brightwheel.</p></div>
+      </div>
+    </div>
+
+    <h3 style="color:#fff;font-size:1.4rem;margin-bottom:22px;">Leadership Academy links &amp; resources</h3>
+    <div class="la-links">
+      <a class="la-link" href="tel:+13368859686">
+        <span class="ic">☎</span>
+        <span class="tx"><strong>Call Admissions</strong><span>+1 (336) 885-9686</span></span>
+      </a>
+      <a class="la-link" href="mailto:hpfdc1616@gmail.com">
+        <span class="ic">✉</span>
+        <span class="tx"><strong>Email Admissions</strong><span>hpfdc1616@gmail.com</span></span>
+      </a>
+      <a class="la-link" href="https://schools.mybrightwheel.com/sign-in?redirect_path=/" target="_blank" rel="noopener">
+        <span class="ic">→</span>
+        <span class="tx"><strong>Parent Portal Sign-In</strong><span>Brightwheel</span></span>
+      </a>
+      <a class="la-link" href="https://www.ncseaa.edu/NCOS/" target="_blank" rel="noopener">
+        <span class="ic">$</span>
+        <span class="tx"><strong>NC Opportunity Scholarship</strong><span>Tuition assistance program</span></span>
+      </a>
+      <a class="la-link" href="#enroll-academy">
+        <span class="ic">▤</span>
+        <span class="tx"><strong>Enrollment &amp; Tour Request Form</strong><span>Jump to the form below</span></span>
+      </a>
+      <a class="la-link" href="#faq">
+        <span class="ic">?</span>
+        <span class="tx"><strong>Leadership Academy FAQ</strong><span>Ages, hours, tours &amp; more</span></span>
+      </a>
+    </div>
+
+    <a id="enroll-academy"></a>
+    <div class="form-card">
+      <h3>Enroll or request a tour</h3>
+      <p>Tell us a little about your family and we'll be in touch within one business day.</p>
+      <form id="academy-form" action="https://formspree.io/f/xdenbean" method="POST">
+        <input type="hidden" name="_subject" value="Leadership Academy Enrollment / Tour Request">
+        <input type="hidden" name="form_name" value="Leadership Academy Enrollment Form">
+        <div class="form-row">
+          <div class="form-field"><label>Parent / guardian name</label><input type="text" name="parent_name" placeholder="Jane Doe" required></div>
+          <div class="form-field"><label>Phone</label><input type="tel" name="phone" placeholder="(336) 555-0123" required></div>
+        </div>
+        <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+        <div class="form-row">
+          <div class="form-field"><label>Child's first name</label><input type="text" name="child_name" placeholder="Sam" required></div>
+          <div class="form-field">
+            <label>Program of interest</label>
+            <select name="program" required>
+              <option value="">Choose one…</option>
+              <option>Infants (birth–12 mo)</option>
+              <option>Toddlers (up to 2.5 yrs)</option>
+              <option>Pre-School (3–4)</option>
+              <option>Pre-Kindergarten (4–5)</option>
+              <option>Lower School (Grades K–2, Leadership Academy)</option>
+              <option>Before &amp; After Care</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field"><label>Anything you'd like us to know? (optional)</label><textarea rows="3" name="message" placeholder="Preferred tour times, questions, start date…"></textarea></div>
+        <button type="submit" class="btn btn-gold form-submit">Send my request</button>
+        <p class="form-note">By submitting, you agree we may contact you about enrollment. We never share your information.</p>
+      </form>
+      <div class="thankyou">Thank you! Your request is in. We'll reach out within one business day to schedule your visit.</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--gold)">What parents say</span>
+      <h2>Trusted by our families</h2>
+    </div>
+    <div class="grid-cards">
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>My child has attended for a full year and the teachers provide loving care — Ms. Insa and Ms. Ocean were amazing with potty training support. Clean facility and professional staff, five stars all around.</p>
+        <div class="who">— Natalie Vera</div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>My son absolutely loves it there — his teachers treat him like their own. Every day he comes home with a smile and something new he learned.</p>
+        <div class="who">— Lakwaisha Inman</div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>A great place for kids. Warm, structured, and everything you'd want for your child.</p>
+        <div class="who">— Emmanuel Mendez</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL / CONTACT FORM (main) -->
+<section id="enroll" style="background:var(--paper)">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Enroll or request more information</h2>
+      <p>Use this form for any of our programs — infant care through after-school care.</p>
+    </div>
+    <div class="form-card" style="box-shadow:none;border:1px solid var(--line);">
+      <h3>Enrollment question</h3>
+      <p>We'll respond as quickly as we can — usually within one business day.</p>
+      <form id="contact-form" action="https://formspree.io/f/xdenbean" method="POST">
+        <input type="hidden" name="_subject" value="Enrollment Question">
+        <input type="hidden" name="form_name" value="General Enrollment / Contact Form">
+        <div class="form-row">
+          <div class="form-field"><label>First name</label><input type="text" name="first_name" required></div>
+          <div class="form-field"><label>Last name</label><input type="text" name="last_name" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-field"><label>Call back number</label><input type="tel" name="phone" required></div>
+          <div class="form-field"><label>Email</label><input type="email" name="email" required></div>
+        </div>
+        <div class="form-field">
+          <label>Child age group</label>
+          <select name="child_age_group" required>
+            <option value="">Choose one…</option>
+            <option>Infant (birth–12 mo)</option>
+            <option>Toddler (up to 2.5 yrs)</option>
+            <option>Pre-School (3–4)</option>
+            <option>Pre-Kindergarten (4–5)</option>
+            <option>Lower School / Leadership Academy (K–2)</option>
+            <option>School-Age / After School (5–12)</option>
+          </select>
+        </div>
+        <div class="form-field"><label>Enrolment question</label><textarea rows="4" name="message" placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="btn btn-gold form-submit">Submit</button>
+      </form>
+      <div class="thankyou">Thanks for reaching out! We'll call or email you back shortly.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Good to know</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <details>
+      <summary>What ages and grades do you serve?</summary>
+      <div class="a">We care for children from infancy through Pre-Kindergarten, offer before- and after-school care for ages 5–12, and — through the High Point Family Leadership Academy — now enroll Kindergarten through 2nd grade in our Lower School.</div>
+    </details>
+    <details>
+      <summary>When can I tour the center or academy?</summary>
+      <div class="a">Tours are available daily from 5 to 7 PM, and Saturdays by appointment. Submit the enrollment form above and we'll find a time that works for you.</div>
+    </details>
+    <details>
+      <summary>What are your hours of operation?</summary>
+      <div class="a">We're open Monday through Friday, 6:30 AM to 5:30 PM, covering your child before and after the school day.</div>
+    </details>
+    <details>
+      <summary>What does before &amp; after care include?</summary>
+      <div class="a">Homework support, quiet study time, enrichment activities, and supervised play — available every school day, plus seasonal camps.</div>
+    </details>
+    <details>
+      <summary>How do you keep parents updated?</summary>
+      <div class="a">Once enrolled, families receive daily updates, photos, and messages through our Brightwheel parent app, so you stay connected throughout the day.</div>
+    </details>
+    <details>
+      <summary>How do I get started?</summary>
+      <div class="a">Fill out the enrollment form with a few details about your child. We'll reach out within one business day to schedule your tour.</div>
+    </details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <span class="eyebrow">Visit us</span>
+      <h2>We'd love to meet your family</h2>
+      <p class="body">Stop by, call, or send us a message — tours are available daily from 5–7 PM, and Saturdays by appointment.</p>
+      <div class="contact-detail">
+        <span class="ic">📍</span>
+        <div><strong>Address</strong><span>1616 W English Rd, High Point, NC 27262, United States</span></div>
+      </div>
+      <div class="contact-detail">
+        <span class="ic">☎</span>
+        <div><strong>Phone</strong><br><a href="tel:+13368859686">+1 336-885-9686</a></div>
+      </div>
+      <div class="contact-detail">
+        <span class="ic">✉</span>
+        <div><strong>Email</strong><br><a href="mailto:hpfdc1616@gmail.com">hpfdc1616@gmail.com</a></div>
+      </div>
+      <div class="contact-detail">
+        <span class="ic">🕑</span>
+        <div><strong>Hours</strong><span>Monday – Friday, 6:30 AM – 5:30 PM<br>Tours daily 5–7 PM, Saturdays by appointment</span></div>
+      </div>
+      <div class="maprow">
+        <iframe src="https://maps.google.com/maps?q=1616%20W%20English%20Rd%2C%20High%20Point%2C%20NC%2027262&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to High Point Family Day Care Center"></iframe>
+      </div>
+    </div>
+    <img src="images/care-photo.webp" alt="High Point Family Day Care Center" style="width:100%;height:100%;min-height:380px;object-fit:cover;border-radius:22px;">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="top">HIGH POINT</span>
+          <span class="letters">
+            <span style="background:#053aa1">F</span>
+            <span style="background:#0f7166">A</span>
+            <span style="background:#e1372f">M</span>
+            <span style="background:#694fb6">I</span>
+            <span style="background:#fecd0c;color:#000">L</span>
+            <span style="background:#fe960a">Y</span>
+          </span>
+          <span class="bottom">DAY CARE CENTER</span>
+        </div>
+        <p>A faith-based day care center in High Point, NC — infant care through the after-school years, and now the High Point Family Leadership Academy for grades K–2.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="links">
+          <a href="#about">About us</a>
+          <a href="#programs">Programs</a>
+          <a href="#care">Before &amp; after care</a>
+          <a href="#leadership">Leadership Academy</a>
+          <a href="#reviews">Parent reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#enroll">Enroll now</a>
+        </div>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p style="margin-bottom:10px">1616 W English Rd<br>High Point, NC 27262</p>
+        <a href="tel:+13368859686" style="display:block;color:#c1cbd6;margin-bottom:9px">+1 336-885-9686</a>
+        <a href="mailto:hpfdc1616@gmail.com" style="display:block;color:#c1cbd6;margin-bottom:9px">hpfdc1616@gmail.com</a>
+        <p class="hours">Mon–Fri · 6:30 AM – 5:30 PM<br>Tours daily 5–7 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 High Point Family Day Care Center. All rights reserved.</span>
+      <span>Made for High Point families</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function wireForm(formId){
+    var form = document.getElementById(formId);
+    if(!form) return;
+    var ty = form.parentElement.querySelector('.thankyou');
+    var errorBox = document.createElement('div');
+    errorBox.className = 'form-error';
+    errorBox.style.cssText = 'display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:#fdeceb;color:#b3261e;font-weight:600;font-size:.9rem;';
+    form.insertAdjacentElement('afterend', errorBox);
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      errorBox.style.display = 'none';
+      var submitBtn = form.querySelector('button[type=submit]');
+      var originalLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response){
+        if (response.ok) {
+          form.style.display = 'none';
+          if (ty) ty.style.display = 'block';
+        } else {
+          return response.json().then(function(data){
+            var msg = (data && data.errors) ? data.errors.map(function(err){ return err.message; }).join(', ') : 'Something went wrong — please try again or call us at (336) 885-9686.';
+            throw new Error(msg);
+          });
+        }
+      }).catch(function(err){
+        errorBox.textContent = err.message || 'Something went wrong — please try again or call us at (336) 885-9686.';
+        errorBox.style.display = 'block';
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
+      });
+    });
+  }
+  wireForm('academy-form');
+  wireForm('contact-form');
+</script>
+
+</body>
+</html>
